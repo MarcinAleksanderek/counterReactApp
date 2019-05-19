@@ -20,10 +20,27 @@ body {
 	
 }
 
+li {
+	text-decoration: none;
+	list-style: none;
+	display: flex;
+	align-content: space-between;
+	flex-direction: column;
+	padding: 12px;
+	margin-bottom: 32px;
+	background:rgba(255, 255, 255, 0.712);
+	border-radius: 20px;
+}
+
+.spBetween{
+	display: flex;
+	align-content: space-between;
+}
+
 .button {
 	display: inline-block;
 	padding: 10px 16px;
-	margin-left: 16px;
+	margin: 0 10px;
 	font-size: 16px;
 	line-height: 40px;
 	border: none;

@@ -1,31 +1,21 @@
-var Counter = React.createClass({
-	getInitialState: function() {
-		return {
-			counter: 0
-		};
+var counters = [
+	{
+		id: 1,
 	},
-
-	increment: function() {
-		this.setState({
-			counter: this.state.counter + 1
-		});
+	{
+		id: 2,
 	},
+	{
+		id: 3,
+	}
+];
 
-	decrement: function() {
-		this.setState({
-			counter: this.state.counter - 1
-		});
-	},
-
+var App = React.createClass({
 	render: function() {
-		return React.createElement('div', {},
-			React.createElement('span', {},'Counter ' + this.state.counter),
-			React.createElement('div', {
-				onClick: this.increment,
-				className: 'button green'}, 'increment'),
-			React.createElement('div', {
-				onClick: this.decrement,
-				className: 'button red'}, 'decrement'),
+		return (
+			React.createElement('div', {className: 'app'},
+			React.createElement(CountersList, {items: counters}, {})
+			)
 		);
 	}
 });
